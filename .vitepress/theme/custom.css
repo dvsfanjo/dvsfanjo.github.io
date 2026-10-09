@@ -1,0 +1,10 @@
+/* 让超宽的块级公式可以横向滚动，避免溢出 */
+.katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.4rem 0;
+}
+
+.katex {
+  font-size: 1.05em;
+}
