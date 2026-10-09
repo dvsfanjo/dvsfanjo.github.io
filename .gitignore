@@ -6,3 +6,4 @@ dist/
 .scan.mjs
 .npm-cache/
 .tmp/
+.vitepress/cache/

@@ -1,10 +1,37 @@
-/* 让超宽的块级公式可以横向滚动，避免溢出 */
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0.4rem 0;
+/* ===== KaTeX 数学公式 ===== */
+
+/* 行内公式大小：1.1em 与中文正文比较协调（KaTeX 默认 1.21em，可自行调整） */
+.katex {
+  font-size: 1.1em;
 }
 
-.katex {
-  font-size: 1.05em;
+/* 块级公式：居中、上下留白、超宽时横向滚动 */
+.katex-display {
+  display: block;
+  margin: 0.8em 0;
+  text-align: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+/* ===== 首页背景 ===== */
+
+/* 用 public/bg.png 当首页背景。它是竖版卡通图，用 contain + 靠右 能完整显示不变形。
+   如果你想让它铺满整屏（会放大裁切），把下面几行换成：
+     background-size: cover;
+     background-position: center;   */
+.VPHero {
+  background-color: #ffffff;
+  background-image: url('/bg.png');
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* 白色背景上用深色标题 */
+.VPHero .name,
+.VPHero .name .clip {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  background: none !important;
 }
